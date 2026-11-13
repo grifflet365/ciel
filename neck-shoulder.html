@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>【試作】肩こり・首の痛み | Salon Ciel. Chiba</title>
+<meta name="description" content="首や肩の痛みでお悩みの方へ。蘇我駅徒歩1分の整体サロンの施術をご紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e1a26;--navy2:#15263a;--ink:#1c2630;--sub:#6b7782;
+  --gold:#b89a5e;--gold-l:#d9c48f;--ivory:#f7f4ee;--line:#e4ddd0;--white:#fff
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans JP","Hiragino Sans",Meiryo,sans-serif;font-weight:300;color:var(--ink);line-height:2;background:var(--white);padding-bottom:64px}
+a{color:inherit}
+.serif{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif}
+.en{font-family:"Cormorant Garamond",serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-size:14px;font-weight:500}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+.banner{background:#2a2320;color:var(--gold-l);font-size:12px;text-align:center;padding:6px 12px;letter-spacing:.05em}
+
+header{position:sticky;top:0;z-index:30;background:rgba(14,26,38,.94);backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:22px;letter-spacing:.14em;color:#fff;text-decoration:none;font-weight:500}
+.logo small{display:block;font-family:"Noto Sans JP";font-size:9px;letter-spacing:.3em;color:var(--gold-l);line-height:1;margin-top:2px}
+nav{display:none;gap:28px;font-size:13px;letter-spacing:.08em}
+nav a{color:#e9e4d8;text-decoration:none}
+nav a:hover{color:var(--gold-l)}
+.hbtn{display:none;border:1px solid var(--gold);color:var(--gold-l);padding:8px 22px;font-size:13px;letter-spacing:.1em;text-decoration:none}
+@media(min-width:900px){nav{display:flex}.hbtn{display:inline-block}}
+
+.hero{position:relative;color:#fff;text-align:center;padding:96px 0 0;
+  background:radial-gradient(ellipse at 70% 10%,#24415c 0,transparent 55%),linear-gradient(180deg,#0e1a26,#15263a)}
+.hero .photo-note{position:absolute;right:12px;top:12px;font-size:11px;color:#8b98a5}
+.hero .en{display:block;margin-bottom:24px}
+.hero h1{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(26px,5.6vw,46px);line-height:1.6;letter-spacing:.12em;margin:0 0 24px}
+.hero h1 em{font-style:normal;color:var(--gold-l)}
+.hero p.lead{max-width:560px;margin:0 auto 40px;color:#c8d0d8;font-size:14px}
+.btn{display:inline-block;background:linear-gradient(135deg,#c9ab6c,#a98a4e);color:#1a1408;font-weight:500;text-decoration:none;letter-spacing:.14em;padding:18px 44px;font-size:15px}
+.btn:hover{filter:brightness(1.08)}
+.btn-sub{display:block;margin-top:12px;font-size:12px;color:#aeb8c2;letter-spacing:.08em}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:72px;border-top:1px solid rgba(217,196,143,.3);background:rgba(0,0,0,.22)}
+.stats div{padding:24px 8px;border-right:1px solid rgba(217,196,143,.2)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(26px,5vw,40px);color:var(--gold-l);font-weight:500;line-height:1.2}
+.stats span{font-size:11px;letter-spacing:.1em;color:#b6c0ca}
+
+section{padding:96px 0}
+.alt{background:var(--ivory)}
+.dark{background:var(--navy);color:#fff}
+.head{text-align:center;margin-bottom:56px}
+.head h2{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(22px,4vw,30px);letter-spacing:.14em;margin:10px 0 0}
+.head h2::after{content:"";display:block;width:36px;height:1px;background:var(--gold);margin:22px auto 0}
+
+.grid{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.feat{background:#fff;border:1px solid var(--line);padding:40px 28px 32px;position:relative}
+.feat .no{font-family:"Cormorant Garamond",serif;font-size:42px;color:var(--gold);line-height:1;opacity:.9}
+.feat h3{font-family:"Noto Serif JP",serif;font-weight:500;font-size:18px;letter-spacing:.08em;margin:14px 0 10px}
+.feat p{margin:0;font-size:14px;color:var(--sub)}
+
+.ph{aspect-ratio:4/3;display:grid;place-items:center;color:#9aa6b1;font-size:12px;letter-spacing:.1em;
+  background:repeating-linear-gradient(135deg,#eceae4 0 12px,#f3f1ec 12px 24px);border:1px solid var(--line)}
+.worry{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.worry a{padding:32px 16px;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;text-decoration:none}
+.worry b{display:block;font-family:"Noto Serif JP",serif;font-weight:500;letter-spacing:.1em;font-size:17px}
+.worry span{font-size:12px;color:var(--sub)}
+
+.price{max-width:640px;margin:0 auto}
+.price .row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(217,196,143,.28);padding:20px 4px}
+.price .row span{font-size:15px;letter-spacing:.06em}
+.price .row b{font-family:"Noto Serif JP",serif;font-weight:500;font-size:22px;color:var(--gold-l)}
+.price .first{background:rgba(217,196,143,.08);border:1px solid var(--gold);padding:28px 24px;margin-bottom:24px;text-align:center}
+.price .first .t{letter-spacing:.14em;font-size:13px;color:var(--gold-l)}
+.price .first b{display:block;font-family:"Noto Serif JP",serif;font-weight:500;font-size:44px;line-height:1.4}
+.price .first b small{font-size:15px;margin-left:6px;color:#c8d0d8}
+.note{font-size:12px;color:#8e99a4;margin-top:20px}
+
+.steps{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.step{padding:8px 28px 24px;border-left:1px solid var(--gold)}
+.step .no{font-family:"Cormorant Garamond",serif;font-size:14px;letter-spacing:.2em;color:var(--gold)}
+.step h3{font-family:"Noto Serif JP",serif;font-weight:500;margin:4px 0 8px;font-size:17px}
+.step p{margin:0;font-size:13px;color:var(--sub)}
+
+.todo{display:inline-block;background:#fff3cd;color:#664d03;font-size:11px;padding:0 8px;margin-left:4px;vertical-align:middle}
+.voice{background:#fff;border:1px solid var(--line);padding:32px;text-align:center;color:var(--sub);font-size:14px}
+
+details{border-bottom:1px solid var(--line);padding:20px 4px}
+summary{cursor:pointer;font-family:"Noto Serif JP",serif;font-weight:500;letter-spacing:.05em;list-style:none;position:relative;padding-right:32px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:-2px;color:var(--gold);font-size:22px;font-weight:300}
+details[open] summary::after{content:"−"}
+details p{margin:12px 0 0;font-size:14px;color:var(--sub)}
+
+.cta{text-align:center;background:linear-gradient(180deg,#15263a,#0e1a26);color:#fff}
+.cta h2{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(22px,4vw,30px);letter-spacing:.14em;margin:12px 0 32px}
+.access{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.access dl{margin:0;font-size:14px}
+.access dt{color:var(--gold);font-size:12px;letter-spacing:.2em;margin-top:18px}
+.access dd{margin:2px 0 0}
+
+/* 写真枠: images/ に同名ファイルを置けば自動で表示、無ければ仮枠 */
+.photo{position:relative;margin:0;overflow:hidden;background:repeating-linear-gradient(135deg,#e9e6df 0 14px,#f1eee8 14px 28px);border:1px solid var(--line)}
+.photo::before{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:12px;font-size:12px;letter-spacing:.12em;color:#98a3ad;line-height:1.7}
+.photo img{position:relative;display:block;width:100%;height:100%;object-fit:cover}
+.r43{aspect-ratio:4/3}.r32{aspect-ratio:3/2}.r11{aspect-ratio:1/1}.r34{aspect-ratio:3/4}.r169{aspect-ratio:16/9}
+.dark .photo,.hero .photo{background:repeating-linear-gradient(135deg,#1b2d40 0 14px,#203449 14px 28px);border-color:rgba(217,196,143,.25)}
+.dark .photo::before,.hero .photo::before{color:#7d8d9c}
+.hero-grid{display:grid;gap:40px;align-items:center;text-align:left}
+.hero-grid .txt{text-align:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr}.hero-grid .txt{text-align:left}.hero-grid .lead{margin-left:0!important}}
+.hero-grid .photo{box-shadow:0 0 0 8px rgba(217,196,143,.12)}
+.split{display:grid;gap:32px;align-items:center;margin-bottom:72px}
+.split:last-child{margin-bottom:0}
+.split h3{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(19px,3.4vw,24px);letter-spacing:.08em;line-height:1.7;margin:8px 0 14px}
+.split p{margin:0;font-size:14px;color:var(--sub)}
+.split .no{font-family:"Cormorant Garamond",serif;font-size:56px;color:var(--gold);line-height:1;opacity:.85}
+@media(min-width:860px){.split{grid-template-columns:1fr 1fr;gap:64px}.split.rev .photo{order:2}}
+.gallery{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:860px){.gallery{grid-template-columns:repeat(4,1fr)}}
+.profile{display:grid;gap:40px;align-items:center}
+@media(min-width:860px){.profile{grid-template-columns:340px 1fr}}
+.profile h3{font-family:"Noto Serif JP",serif;font-weight:500;font-size:22px;letter-spacing:.1em;margin:6px 0 4px}
+.profile .role{font-size:12px;color:var(--gold);letter-spacing:.2em}
+.profile p{font-size:14px;color:var(--sub);margin:16px 0 0}
+.media{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px}
+.media span{border:1px solid var(--line);padding:6px 18px;font-size:12px;color:var(--sub);letter-spacing:.1em;background:#fff}
+.more{text-align:center;margin-top:40px}.more a{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:10px 32px;font-size:13px;letter-spacing:.12em;text-decoration:none}.more a:hover{background:var(--gold);color:#fff}.dark .more a{color:var(--gold-l)}.dark .more a:hover{color:#1a1408;background:var(--gold-l)}
+.contact3{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}.contact3 a{border:1px solid rgba(217,196,143,.5);color:#fff;text-decoration:none;padding:12px 26px;font-size:14px;letter-spacing:.08em}.contact3 a:hover{background:rgba(217,196,143,.15)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin:0 0 22px;font-size:12px}.flinks a{color:#aeb8c2;text-decoration:none}.flinks a:hover{color:var(--gold-l)}
+footer{background:#0a131c;color:#8e99a4;text-align:center;padding:40px 0;font-size:12px;letter-spacing:.08em}
+footer .logo{display:inline-block;margin-bottom:10px}
+
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;z-index:40;background:#0e1a26;border-top:1px solid var(--gold)}
+.bar a{flex:1;text-align:center;text-decoration:none;padding:16px 4px;font-size:13px;letter-spacing:.12em;color:var(--gold-l)}
+.bar a.main{background:linear-gradient(135deg,#c9ab6c,#a98a4e);color:#1a1408;font-weight:500;flex:1.6}
+@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+
+.sub-hero{background:radial-gradient(ellipse at 70% 0,#24415c 0,transparent 55%),linear-gradient(180deg,#0e1a26,#15263a);color:#fff;text-align:center;padding:72px 0 64px}
+.sub-hero h1{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(24px,5vw,38px);letter-spacing:.14em;margin:10px 0 0}
+.crumb{font-size:12px;color:#8e99a4;margin-bottom:18px;letter-spacing:.08em}.crumb a{color:#b6c0ca;text-decoration:none}
+.worries{max-width:640px;margin:0 auto;padding:0;list-style:none}
+.worries li{padding:16px 8px 16px 40px;border-bottom:1px solid var(--line);position:relative;font-family:"Noto Serif JP",serif}
+.worries li::before{content:"";position:absolute;left:8px;top:26px;width:16px;height:1px;background:var(--gold)}
+.prose{max-width:760px;margin:0 auto;font-size:15px}
+.prose p{margin:0 0 1.4em}
+.prose h3{font-family:"Noto Serif JP",serif;font-weight:500;letter-spacing:.08em;font-size:19px;margin:2em 0 .6em;color:var(--ink)}
+.plan{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:8px}
+.plan .p{background:#fff;border:1px solid var(--line);padding:28px 24px}
+.plan .p h3{font-family:"Noto Serif JP",serif;font-weight:500;font-size:17px;margin:0 0 4px}
+.plan .p .pr{font-family:"Noto Serif JP",serif;font-size:26px;color:var(--gold);margin:6px 0 10px}
+.plan .p p{margin:0;font-size:13px;color:var(--sub)}
+.plan .p.first{border-color:var(--gold);background:#fffdf7}
+.others{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.others a{border:1px solid var(--line);background:#fff;padding:10px 22px;font-size:13px;text-decoration:none;letter-spacing:.08em}
+.others a:hover{border-color:var(--gold);color:var(--gold)}
+.disc{font-size:12px;color:var(--sub);max-width:760px;margin:32px auto 0}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html#top">Salon Ciel.<small>CHIBA / SOGA</small></a>
+    <nav>
+      <a href="index.html#feature">特徴</a>
+      <a href="index.html#menu">施術・料金</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#access">アクセス</a>
+      <a href="https://salonciel-chiba.com/beauty/">Beauty</a>
+    </nav>
+    <a class="hbtn" href="index.html#reserve">ご予約</a>
+  </div>
+</header>
+<main>
+  <div class="sub-hero"><div class="wrap">
+    <div class="crumb"><a href="index.html">HOME</a> / 肩こり・首の痛み</div>
+    <span class="en">NECK / SHOULDER</span>
+    <h1>肩こり・首の痛み</h1>
+  </div></div>
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="en">Concern</span><h2>こんなお悩みはありませんか</h2></div>
+      <ul class="worries"><li>首や肩が慢性的に痛く、湿布が手放せない</li><li>マッサージを受けても、その場しのぎになってしまう</li><li>ジンジンする痛みやしびれがある</li></ul>
+    </div>
+  </section>
+  <section class="alt">
+    <div class="wrap">
+      <div class="prose">
+      <h3>首・肩がつらくなる理由</h3>
+      <p>首の筋肉は細くて薄いのに、前後左右や回旋など多くの動きを担っています。一部の筋肉だけに負担が集中すると、痛みとして信号を出します。スマホを見る姿勢で起こる「スマホ首」も、首の一部に負担がかかった結果です。</p>
+      <p>負担のかかった筋肉を守るために、まわりの筋肉も固まり、動かさないよう痛みを出すことがあります。</p>
+      <h3>むち打ちについて</h3>
+      <p>軽い衝撃でも、頭を支えようと筋肉が一瞬で固まり、わずかにずれたまま緊張が続くことがあります。直後は無症状でも、数日たつと重だるさとして現れる場合があります。</p>
+      <h3>VIM療法とは</h3>
+      <p>VIM(Voluntary Inhibition Method)は、痛みのある側ではなく、反対側へアプローチする施術法です。たとえば左の股関節がつらいときは、右の股関節を調整します。痛い部分に直接触れない、やさしい施術です。</p>
+      <p>当店は、この療法の認定院です。</p>
+      </div>
+      <div class="more"><a href="treatment.html">施術メニュー・料金を見る</a></div>
+      <p class="disc">※効果・感じ方には個人差があります。医療行為ではありません。</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="en">Photo</span><h2>施術の様子</h2></div>
+      <figure class="photo r43" style="max-width:560px;margin:0 auto" data-label="施術風景&#10;images/feature2.jpg"><img src="images/feature2.jpg" alt="施術の様子" onerror="this.remove()"></figure>
+    </div>
+  </section>
+  <section class="alt"><div class="wrap"><div class="head"><span class="en">Other Menu</span><h2>ほかのお悩み</h2></div><div class="others"><a href="waist-back.html">腰・背中の痛み</a><a href="knees-foot.html">膝の痛み・捻挫</a><a href="hip.html">股関節の痛み</a><a href="elbow-wrist.html">肘・手首の痛み</a><a href="treatment.html">施術メニュー・料金</a></div></div></section>
+  <section class="cta">
+    <div class="wrap">
+      <span class="en">Reservation</span>
+      <h2>まずは、初回お試しから。</h2>
+      <a class="btn" href="https://ssv.onemorehand.jp/salonciel_chiba/">初回お試しを予約する</a>
+      <span class="btn-sub">新規お試し 60分×2回 4,980円(税込)</span>
+      <div class="contact3"><a href="tel:0433096500">電話 043-309-6500</a><a href="https://lin.ee/z3pU5tS">LINEで予約・相談</a><a href="https://salonciel-chiba.com/contact/">メールで問い合わせ</a></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <a class="logo" href="index.html#top">Salon Ciel.</a><br>
+  <div class="flinks" style="margin-top:14px"><a href="https://salonciel-chiba.com/feature/">当店の特徴</a><a href="https://salonciel-chiba.com/about/">店舗概要</a><a href="https://salonciel-chiba.com/profile/">院長プロフィール</a><a href="https://salonciel-chiba.com/q_a/">よくあるご質問</a><a href="https://salonciel-chiba.com/category/news/">お知らせ</a><a href="https://salonciel-chiba.com/category/all/">ブログ</a><a href="https://salonciel-chiba.com/contact/">お問い合わせ</a><a href="https://salonciel-chiba.com/beauty/">Beauty Salon Ciel Chiba</a></div>
+  千葉市中央区今井2-4-7 新月ビル503 / TEL 043-309-6500<br>
+  <small>© リニューアル試作ページ</small>
+</footer>
+<div class="bar">
+  <a class="main" href="https://ssv.onemorehand.jp/salonciel_chiba/">予約する</a>
+  <a href="tel:0433096500">電話</a>
+  <a href="https://lin.ee/z3pU5tS">LINE</a>
+</div>
+</body>
+</html>
