@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ホームページ更新マニュアル | Salon Ciel. Chiba</title>
+<style>
+:root{--navy:#0e1a26;--gold:#b89a5e;--ink:#1c2630;--sub:#5f6b76;--line:#e4ddd0;--bg:#f7f4ee}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:var(--ink);line-height:1.9;background:#fff}
+header{background:var(--navy);color:#fff;padding:36px 20px;text-align:center}
+header h1{margin:0;font-size:24px;letter-spacing:.1em;font-weight:500}
+header p{margin:8px 0 0;color:#c9d2da;font-size:13px}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+nav.toc{background:var(--bg);border:1px solid var(--line);padding:18px 24px;margin:32px 0}
+nav.toc b{display:block;margin-bottom:6px}
+nav.toc ol{margin:0;padding-left:1.4em;font-size:14px}
+h2{font-size:20px;margin:56px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--gold);letter-spacing:.05em}
+h3{font-size:16px;margin:28px 0 6px}
+ol.steps{counter-reset:s;list-style:none;padding:0}
+ol.steps li{counter-increment:s;position:relative;padding:6px 0 6px 40px}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;text-align:center;line-height:28px;font-size:13px}
+.menu{background:#eef3f7;border-radius:4px;padding:1px 8px;font-weight:600;font-size:14px;white-space:nowrap}
+.note,.warn{padding:12px 16px;font-size:14px;margin:16px 0;border-left:4px solid}
+.note{background:#f4f8fb;border-color:#5b8db8}
+.warn{background:#fff6e5;border-color:#d99a2b}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:var(--bg);width:34%}
+footer{margin:64px 0 40px;text-align:center;color:var(--sub);font-size:12px}
+@media print{header{background:#fff;color:#000;border-bottom:2px solid #000}header p{color:#333}h2{break-after:avoid}ol.steps li,.note,.warn{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+  <h1>ホームページ 更新マニュアル</h1>
+  <p>Salon Ciel. Chiba ／ 週1回の更新を想定した、いちばん簡単な手順</p>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <b>目次</b>
+  <ol>
+    <li><a href="#login">管理画面に入る</a></li>
+    <li><a href="#news">お知らせを書く(いちばんよく使います)</a></li>
+    <li><a href="#blog">ブログを書く</a></li>
+    <li><a href="#photo">写真の入れ方・トップ写真の差し替え</a></li>
+    <li><a href="#price">料金を変える</a></li>
+    <li><a href="#faq">よくある質問を足す・直す</a></li>
+    <li><a href="#info">電話・営業時間・住所・予約URLを変える</a></li>
+    <li><a href="#holiday">臨時休業・営業時間変更を知らせる</a></li>
+    <li><a href="#publish">公開前チェック(最初の1回だけ)</a></li>
+    <li><a href="#care">日々の保守(月1回の確認)</a></li>
+    <li><a href="#trouble">困ったとき</a></li>
+  </ol>
+</nav>
+
+<h2 id="login">1. 管理画面に入る</h2>
+<ol class="steps">
+  <li>ブラウザで <b>https://(サイトのアドレス)/wp-admin</b> を開きます。<br><small>※実際のアドレスは、公開時にここへ書き込んでください。</small></li>
+  <li>ユーザー名とパスワードを入れて、ログインします。</li>
+  <li>左側に黒いメニューが出ます。以降の手順は、このメニューから始めます。</li>
+</ol>
+<div class="warn">パスワードは他の人に教えない・紙やメモに残さない。パスワード管理アプリの利用がおすすめです。</div>
+
+<h2 id="news">2. お知らせを書く</h2>
+<p>トップページの「お知らせ」欄に、新しい順で表示されます。</p>
+<ol class="steps">
+  <li>左メニューの <span class="menu">投稿</span> → <span class="menu">新規投稿を追加</span> をクリック。</li>
+  <li>いちばん上に <b>タイトル</b> を入れます(例:11月の営業日のお知らせ)。</li>
+  <li>本文を入力します。改行は Enter、写真は本文の「＋」ボタンから入れられます。</li>
+  <li>右側の「カテゴリー」で <b>「お知らせ」にチェック</b> を入れます。<br><small>※チェックを忘れると、トップのお知らせ欄に出ません。</small></li>
+  <li>右上の <span class="menu">公開</span> を押し、もう一度出る <span class="menu">公開</span> を押します。</li>
+  <li>トップページを開いて、お知らせ欄に出ていることを確認します。</li>
+</ol>
+<div class="note">日付を指定して予約投稿したいときは、「公開」の横の「すぐに」をクリックして日時を選び、「予約」を押します。</div>
+<h3>お知らせを直す・消す</h3>
+<ol class="steps">
+  <li><span class="menu">投稿</span> → <span class="menu">投稿一覧</span> で対象の記事にマウスを合わせ、「編集」を押します。</li>
+  <li>直したら右上の <span class="menu">更新</span> を押します。</li>
+  <li>消すときは、一覧で「ゴミ箱へ移動」を押します。(ゴミ箱の中は、あとで戻せます)</li>
+</ol>
+
+<h2 id="blog">3. ブログを書く</h2>
+<p>手順は、お知らせと同じです。違うのはカテゴリーだけです。</p>
+<ol class="steps">
+  <li><span class="menu">投稿</span> → <span class="menu">新規投稿を追加</span> を開きます。</li>
+  <li>タイトルと本文を入れ、<b>「お知らせ」のチェックは入れません</b>(必要なら別のカテゴリーを選びます)。</li>
+  <li>見出しをつけると読みやすくなります。本文の「＋」→「見出し」を選びます。</li>
+  <li>右上の <span class="menu">公開</span> を押します。</li>
+</ol>
+<div class="note">ブログは、メニューの「ブログ」ページに一覧で出ます。お知らせにも出したい場合は、「お知らせ」にもチェックを入れてください。</div>
+
+<h2 id="photo">4. 写真の入れ方・トップ写真の差し替え</h2>
+<h3>記事に写真を入れる</h3>
+<ol class="steps">
+  <li>本文の「＋」を押して <span class="menu">画像</span> を選びます。</li>
+  <li>「アップロード」でパソコンやスマホの写真を選びます。</li>
+  <li>アップロード後、右側の「代替テキスト」に写真の説明を一言入れます(例:店内の様子)。</li>
+</ol>
+<div class="warn">お客様の顔が写っている写真は、必ず本人の了承を得てから載せてください。写真は横幅1,500px程度・2MB以内がおすすめです(大きすぎると表示が遅くなります)。</div>
+<h3>トップページの写真を差し替える</h3>
+<ol class="steps">
+  <li>左メニューの <span class="menu">外観</span> → <span class="menu">カスタマイズ</span> を開きます。</li>
+  <li><span class="menu">サロン情報(Salon Ciel)</span> → <span class="menu">写真の差し替え</span> を選びます。</li>
+  <li>差し替えたい場所(メイン写真・特徴①〜③・代表・アクセス)の「画像を選択」から写真を選びます。</li>
+  <li>右側のプレビューで確認し、上の <span class="menu">公開</span> を押します。</li>
+</ol>
+<div class="note">写真を設定しなかった場所には、最初から入っている写真が表示されます。元に戻したいときは「削除」を押してください。</div>
+
+<h2 id="price">5. 料金を変える</h2>
+<ol class="steps">
+  <li>左メニューの <span class="menu">料金メニュー</span> を開くと、料金の一覧が出ます。</li>
+  <li>変えたい行の「編集」を押します。</li>
+  <li>「料金の設定」の枠で、<b>時間・料金・説明</b> を直します。(料金は「6,000円」のように、円まで書きます)</li>
+  <li>右上の <span class="menu">更新</span> を押します。</li>
+</ol>
+<h3>メニューを増やす・減らす・並べ替える</h3>
+<ul>
+  <li><b>増やす:</b> <span class="menu">料金メニュー</span> → <span class="menu">新規追加</span>。タイトルに名前(例:全身本格整体)を入れ、「料金の設定」を入力して「公開」。</li>
+  <li><b>減らす:</b> 一覧で「ゴミ箱へ移動」。</li>
+  <li><b>並べ替え:</b> 編集画面の右側「ページ属性」にある「順序」に数字を入れます。小さい数字ほど上に出ます。</li>
+  <li><b>新規お試しの枠:</b> 目立つ枠に表示されるのは、「目立たせる」にチェックの入ったメニューです。</li>
+</ul>
+<div class="warn">トップの大きな「新規お試し 4,980円」の数字は、ここではなく <b>外観 → カスタマイズ → 基本情報・営業時間</b> の「新規お試し料金」で変えます。両方を合わせてください。</div>
+
+<h2 id="faq">6. よくある質問を足す・直す</h2>
+<ol class="steps">
+  <li>左メニューの <span class="menu">よくある質問</span> を開きます。</li>
+  <li>直すときは、対象の「編集」を押します。<b>タイトルが質問</b>、<b>本文が答え</b> です。</li>
+  <li>足すときは <span class="menu">新規追加</span> を押し、質問と答えを入れて「公開」します。</li>
+  <li>並び順は、料金メニューと同じく「順序」の数字で変えます。</li>
+</ol>
+
+<h2 id="info">7. 電話・営業時間・住所・予約URLを変える</h2>
+<ol class="steps">
+  <li><span class="menu">外観</span> → <span class="menu">カスタマイズ</span> → <span class="menu">サロン情報(Salon Ciel)</span> を開きます。</li>
+  <li>変える内容に応じて、次の項目を開きます。</li>
+  <li>直したら、上の <span class="menu">公開</span> を押します。</li>
+</ol>
+<table>
+  <tr><th>基本情報・営業時間</th><td>電話番号、営業時間(平日・土日祝)、郵便番号、住所、アクセス案内、新規お試しの料金と説明</td></tr>
+  <tr><th>リンク</th><td>予約ページのURL、LINEのURL、問い合わせページのURL</td></tr>
+  <tr><th>写真の差し替え</th><td>トップ・特徴・代表・アクセスの写真</td></tr>
+  <tr><th>公開設定</th><td>検索エンジンに表示するかどうか</td></tr>
+</table>
+<div class="note">ここを直すと、トップページ・全ページ下部の予約バー・フッターなど、サイト全体の表示がまとめて変わります。</div>
+
+<h2 id="holiday">8. 臨時休業・営業時間変更を知らせる</h2>
+<p>よくある更新です。次の2つを組み合わせます。</p>
+<ol class="steps">
+  <li>「お知らせ」を書く(手順2)。例:「12/30〜1/3は年末年始休業です」</li>
+  <li>通常の営業時間そのものが変わるときは、手順7で営業時間を直します。</li>
+  <li>休業が終わったら、お知らせはそのまま残して構いません(古い日付で履歴になります)。</li>
+</ol>
+
+<h2 id="publish">9. 公開前チェック(最初の1回だけ)</h2>
+<p>新しいサイトを本番のアドレスで公開するときに行います。</p>
+<ol class="steps">
+  <li><span class="menu">外観</span> → <span class="menu">カスタマイズ</span> → <span class="menu">サロン情報</span> → <span class="menu">公開設定</span> を開きます。</li>
+  <li>「検索エンジンに表示しない」の <b>チェックを外し</b> 、「公開」を押します。<br><small>※公開前は、Googleに表示されないよう、チェックが入っています。</small></li>
+  <li>左メニューの <span class="menu">設定</span> → <span class="menu">表示設定</span> で、「検索エンジンでの表示」のチェックも外れていることを確認します。</li>
+  <li>投稿一覧から、サンプル記事「新しいホームページを公開しました(サンプル記事)」を削除するか、内容を書き換えます。</li>
+  <li>トップから全ページを開いて、電話・予約・LINEのボタンが動くか確認します。</li>
+</ol>
+
+<h2 id="care">10. 日々の保守(月1回の確認)</h2>
+<ol class="steps">
+  <li>管理画面にログインし、左メニュー <span class="menu">ダッシュボード</span> → <span class="menu">更新</span> を開きます。</li>
+  <li>WordPress本体・プラグイン・テーマの更新があれば、「更新」を押します。(自動更新を入れている場合は不要です)</li>
+  <li>サーバーのバックアップが取られているか、サーバー管理画面(Xserver のサーバーパネル)で確認します。</li>
+  <li>サイトを開いて、表示が崩れていないか確認します。</li>
+</ol>
+<div class="warn">更新の前には、必ずバックアップがあることを確認してください。更新後に表示がおかしくなったら、何もせず、このマニュアルの「困ったとき」に進んでください。</div>
+
+<h2 id="trouble">11. 困ったとき</h2>
+<table>
+  <tr><th>ログインできない</th><td>ログイン画面の「パスワードをお忘れですか?」から、登録メールアドレスで再設定します。</td></tr>
+  <tr><th>お知らせがトップに出ない</th><td>投稿のカテゴリーに「お知らせ」が入っているか、「公開」になっているか(下書きのままではないか)を確認します。</td></tr>
+  <tr><th>変えたのに反映されない</th><td>ブラウザの再読み込み(Ctrl+F5 / スマホは履歴を消して再表示)を試します。カスタマイズは、上の「公開」を押し忘れていないか確認します。</td></tr>
+  <tr><th>表示が崩れた・真っ白になった</th><td>直前に行った操作を覚えておき、作業を止めて、制作担当に連絡してください。</td></tr>
+  <tr><th>間違えて消した</th><td>投稿・料金・質問は「ゴミ箱」にあります。各一覧の上にある「ゴミ箱」から「復元」できます。</td></tr>
+</table>
+<div class="warn">次のことは、しないでください:プラグインやテーマの勝手な追加・削除、「外観 → テーマ」の変更、「ツール」や「設定」の変更(手順9を除く)。</div>
+
+<footer>Salon Ciel. Chiba ホームページ更新マニュアル(試作版) ／ この内容は、実際の管理画面で動作確認のうえ、画面写真を加えて仕上げます。</footer>
+
+</div>
+</body>
+</html>
