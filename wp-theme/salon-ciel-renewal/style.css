@@ -3,7 +3,7 @@ Theme Name: Salon Ciel Renewal
 Theme URI: https://salonciel-chiba.com/
 Author: Salon Ciel. Chiba
 Description: Salon Ciel. Chiba のリニューアル用オリジナルテーマ。ネイビー×ゴールドの落ち着いたデザイン。
-Version: 1.0.0
+Version: 1.1.0
 Requires at least: 6.0
 Requires PHP: 7.4
 Text Domain: salon-ciel
@@ -181,3 +181,41 @@ footer .logo{display:inline-block;margin-bottom:10px}
 .worry a b{font-size:15px}
 .admin-bar header{top:32px}
 @media(max-width:782px){.admin-bar header{top:46px}}
+
+/* ---- v1.1: ナビ増設・スマホメニュー・表・フォーム・地図 ---- */
+nav{gap:18px;font-size:12.5px;letter-spacing:.04em}
+@media(min-width:1100px){nav{gap:24px;font-size:13px}}
+.mnav{border:0;padding:0;display:block}
+.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:0;font-size:0}
+.mnav summary::after{content:none!important}
+.mnav summary span{display:block;width:24px;height:1px;background:var(--gold-l)}
+.mnav .mpanel{position:absolute;left:0;right:0;top:100%;background:#0e1a26;border-top:1px solid rgba(217,196,143,.3);max-height:calc(100vh - 64px);overflow:auto;padding:8px 24px 24px}
+.mnav .mpanel a{display:block;padding:14px 4px;color:#e9e4d8;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px;letter-spacing:.08em}
+.mnav .mpanel a.sub{font-size:13px;color:#aeb8c2}
+header .wrap{position:relative}
+@media(min-width:900px){.mnav{display:none}}
+.ciel-table table,.entry table{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
+.ciel-table th,.ciel-table td,.entry td,.entry th{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top}
+.ciel-table th,.entry th{background:#f6f2e8;font-weight:500;font-size:13px;letter-spacing:.06em}
+.entry ul{padding-left:1.4em;margin:0 0 1.4em}
+.entry li{margin:.3em 0}
+.entry .wp-block-table{margin:1.5em 0;overflow-x:auto}
+.contact3-light{margin:0 0 40px}
+.contact3-light a{border-color:var(--gold);color:var(--gold)}
+.contact3-light a:hover{background:var(--gold);color:#fff}
+.cform-wrap{max-width:640px;margin:0 auto}
+.cform p{margin:0 0 20px}
+.cform label{display:block;font-size:13px;letter-spacing:.06em;color:var(--sub)}
+.cform label em{font-style:normal;font-size:11px;color:#fff;background:var(--gold);padding:1px 8px;margin-left:6px}
+.cform input[type=text],.cform input[type=email],.cform input[type=tel],.cform select,.cform textarea{display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:12px 14px;border:1px solid var(--line);background:#fff;font:inherit;color:var(--ink)}
+.cform .agree label{color:var(--ink);font-size:14px}
+.cform .agree input{margin-right:8px}
+.cform button.btn{border:0;cursor:pointer;font-family:inherit}
+.cform-ok{background:#f6f2e8;border:1px solid var(--gold);padding:20px;text-align:center}
+.cform-err{background:#fdf1f1;border:1px solid #d99;padding:14px;color:#933}
+.map{margin-top:32px}
+.map iframe{width:100%;height:380px;border:0}
+.shopinfo{max-width:760px;margin:0 auto;display:grid;grid-template-columns:140px 1fr;border-top:1px solid var(--line)}
+.shopinfo dt,.shopinfo dd{margin:0;padding:16px 8px;border-bottom:1px solid var(--line)}
+.shopinfo dt{color:var(--gold);font-size:13px;letter-spacing:.14em}
+@media(max-width:560px){.shopinfo{grid-template-columns:1fr}.shopinfo dt{border-bottom:0;padding-bottom:0}}

@@ -27,15 +27,25 @@ $home = home_url( '/' );
 		      'depth'          => 1,
 	      ) );
       } else {
-	      ?>
-      <a href="<?php echo esc_url( $home . '#feature' ); ?>">特徴</a>
-      <a href="<?php echo esc_url( ciel_page_url( 'treatment' ) ); ?>">施術・料金</a>
-      <a href="<?php echo esc_url( $home . '#news' ); ?>">お知らせ</a>
-      <a href="<?php echo esc_url( $home . '#faq' ); ?>">FAQ</a>
-      <a href="<?php echo esc_url( $home . '#access' ); ?>">アクセス</a>
-      <a href="<?php echo esc_url( ciel_blog_url() ); ?>">ブログ</a>
-      <?php } ?>
+	      foreach ( ciel_nav_items() as $it ) {
+		      echo '<a href="' . esc_url( $it[1] ) . '">' . esc_html( $it[0] ) . '</a>';
+	      }
+      }
+      ?>
     </nav>
     <a class="hbtn" href="<?php echo esc_url( ciel_opt( 'reserve_url' ) ); ?>">ご予約</a>
+    <details class="mnav">
+      <summary aria-label="メニュー"><span></span><span></span><span></span></summary>
+      <div class="mpanel">
+        <?php
+        foreach ( ciel_nav_items() as $it ) {
+	        echo '<a href="' . esc_url( $it[1] ) . '">' . esc_html( $it[0] ) . '</a>';
+        }
+        foreach ( ciel_footer_items() as $it ) {
+	        echo '<a class="sub" href="' . esc_url( $it[1] ) . '">' . esc_html( $it[0] ) . '</a>';
+        }
+        ?>
+      </div>
+    </details>
   </div>
 </header>

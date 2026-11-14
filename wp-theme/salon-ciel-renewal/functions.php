@@ -6,7 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CIEL_VERSION', '1.0.0' );
+define( 'CIEL_VERSION', '1.1.0' );
+
+require_once get_template_directory() . '/inc/seed-pages.php';
+require_once get_template_directory() . '/inc/contact.php';
 
 /* ---------- 基本設定 ---------- */
 add_action( 'after_setup_theme', function () {
@@ -43,7 +46,8 @@ function ciel_defaults() {
 		'phone'         => '043-309-6500',
 		'line_url'      => 'https://lin.ee/z3pU5tS',
 		'reserve_url'   => 'https://ssv.onemorehand.jp/salonciel_chiba/',
-		'contact_url'   => 'https://salonciel-chiba.com/contact/',
+		'contact_url'   => home_url( '/contact/' ),
+		'contact_mail'  => '',
 		'zip'           => '260-0834',
 		'address'       => '千葉県千葉市中央区今井2-4-7 新月ビル503',
 		'access'        => 'JR蘇我駅 西口 徒歩1分(ローソン入居ビル5階)',
@@ -92,6 +96,31 @@ function ciel_blog_url() {
 	return $id ? get_permalink( $id ) : home_url( '/blog/' );
 }
 
+/** サイト全体のメニュー(ヘッダー・スマホメニュー・フッターで共通) */
+function ciel_nav_items() {
+	return array(
+		array( '当店の特徴', ciel_page_url( 'feature' ) ),
+		array( '施術・料金', ciel_page_url( 'treatment' ) ),
+		array( 'スカルプ', ciel_page_url( 'growth' ) ),
+		array( '脱毛', ciel_page_url( 'epilation' ) ),
+		array( 'Beauty', ciel_page_url( 'beauty' ) ),
+		array( '院長紹介', ciel_page_url( 'profile' ) ),
+		array( 'お知らせ', ciel_news_category_url() ),
+		array( 'ブログ', ciel_blog_url() ),
+		array( 'アクセス', ciel_page_url( 'access' ) ),
+	);
+}
+
+/** フッター用のそのほかのリンク */
+function ciel_footer_items() {
+	return array(
+		array( '店舗概要', ciel_page_url( 'about' ) ),
+		array( 'お客様の声', ciel_page_url( 'customer' ) ),
+		array( 'よくあるご質問', ciel_page_url( 'faq' ) ),
+		array( 'お問い合わせ', ciel_opt( 'contact_url' ) ),
+	);
+}
+
 /* ---------- noindex (公開前) ---------- */
 add_filter( 'wp_robots', function ( $robots ) {
 	if ( ciel_opt( 'noindex' ) ) {
@@ -123,6 +152,7 @@ add_action( 'customize_register', function ( $wp_customize ) {
 		'access'        => 'アクセス案内',
 		'trial_price'   => '新規お試し料金(数字のみ)',
 		'trial_label'   => '新規お試しの説明',
+		'contact_mail'  => '問い合わせメールの送信先(空欄なら管理者メール)',
 	);
 	foreach ( $text_fields as $key => $label ) {
 		$wp_customize->add_setting( 'ciel_' . $key, array(

@@ -58,9 +58,22 @@ $news   = new WP_Query( array(
     </div>
   </section>
 
-  <section id="menu">
+  <section id="services">
     <div class="wrap">
-      <div class="head"><span class="en">Concern</span><h2>お悩みから探す</h2></div>
+      <div class="head"><span class="en">Services</span><h2>健康×美のトータルサロン</h2></div>
+      <div class="worry">
+        <a href="<?php echo esc_url( ciel_page_url( 'treatment' ) ); ?>"><b>整体</b><span>VIM療法 ／ 初回 <?php echo esc_html( ciel_opt( 'trial_price' ) ); ?>円</span></a>
+        <a href="<?php echo esc_url( ciel_page_url( 'growth' ) ); ?>"><b>スカルプ</b><span>発毛・育毛 ／ 無料カウンセリング</span></a>
+        <a href="<?php echo esc_url( ciel_page_url( 'epilation' ) ); ?>"><b>メンズ脱毛</b><span>ヒゲ脱毛 3,000円〜</span></a>
+        <a href="<?php echo esc_url( ciel_page_url( 'beauty' ) ); ?>"><b>Beauty</b><span>脳洗浄 ／ ハーブピーリング ／ よもぎ蒸し</span></a>
+      </div>
+      <div class="more"><a href="<?php echo esc_url( ciel_page_url( 'feature' ) ); ?>">当店の特徴を見る</a></div>
+    </div>
+  </section>
+
+  <section id="menu" class="alt">
+    <div class="wrap">
+      <div class="head"><span class="en">Concern</span><h2>整体:お悩みから探す</h2></div>
       <div class="worry">
         <?php foreach ( $worry as $w ) : ?>
         <a href="<?php echo esc_url( ciel_page_url( $w[0] ) ); ?>"><b><?php echo esc_html( $w[1] ); ?></b><span><?php echo esc_html( $w[2] ); ?></span></a>
@@ -119,6 +132,7 @@ $news   = new WP_Query( array(
           <h3>代表 藤田 利政</h3>
           <p>鉄道の運転士として長年、腰痛やぎっくり腰に悩まされた経験から治療の道へ。学びを重ねて2021年5月に蘇我で開業しました。痛みをとるだけでなく、「動ける体づくり」までを大切にしています。</p>
           <p style="margin-top:10px">保有資格:整体師・健康管理士・発毛技能士・毛髪診断士</p>
+          <p style="margin-top:14px"><a href="<?php echo esc_url( ciel_page_url( 'profile' ) ); ?>" style="color:var(--gold)">院長プロフィールを読む →</a></p>
           <div class="media" style="justify-content:flex-start;margin-top:20px"><a href="https://www.business-plus.net/interview/2308/k8192.html" style="text-decoration:none"><span>メディア掲載:B-plus 経営者インタビュー</span></a></div>
         </div>
       </div>

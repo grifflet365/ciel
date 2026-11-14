@@ -7,10 +7,11 @@ $home = home_url( '/' );
 <footer>
   <a class="logo" href="<?php echo esc_url( $home ); ?>">Salon Ciel.</a><br>
   <div class="flinks" style="margin-top:14px">
-    <a href="<?php echo esc_url( ciel_page_url( 'treatment' ) ); ?>">施術メニュー・料金</a>
-    <a href="<?php echo esc_url( ciel_news_category_url() ); ?>">お知らせ</a>
-    <a href="<?php echo esc_url( ciel_blog_url() ); ?>">ブログ</a>
-    <a href="<?php echo esc_url( ciel_opt( 'contact_url' ) ); ?>">お問い合わせ</a>
+    <?php
+    foreach ( array_merge( ciel_nav_items(), ciel_footer_items() ) as $it ) {
+	    echo '<a href="' . esc_url( $it[1] ) . '">' . esc_html( $it[0] ) . '</a>';
+    }
+    ?>
   </div>
   <?php echo esc_html( ciel_opt( 'address' ) ); ?> / TEL <?php echo esc_html( ciel_opt( 'phone' ) ); ?><br>
   <small>© <?php echo esc_html( gmdate( 'Y' ) ); ?> Salon Ciel. Chiba</small>
