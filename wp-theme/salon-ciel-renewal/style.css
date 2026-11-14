@@ -179,3 +179,5 @@ footer .logo{display:inline-block;margin-bottom:10px}
 .screen-reader-text{position:absolute;left:-9999px}
 .faq-a{margin:12px 0 0;font-size:14px;color:var(--sub)}.faq-a p{margin:0}
 .worry a b{font-size:15px}
+.admin-bar header{top:32px}
+@media(max-width:782px){.admin-bar header{top:46px}}
